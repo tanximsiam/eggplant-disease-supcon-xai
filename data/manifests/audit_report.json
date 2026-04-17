@@ -1,0 +1,128 @@
+{
+  "source": {
+    "name": "Eggplant Dataset: A Comprehensive Dataset for Agricultural Research and Disease Detection",
+    "doi": "10.17632/5drkk544k8.1",
+    "version": 1,
+    "publish_date": "2024-07-10T12:34:09.921Z",
+    "license": "CC BY 4.0",
+    "license_url": "http://creativecommons.org/licenses/by/4.0",
+    "files": [
+      {
+        "filename": "Augmented Dataset.zip",
+        "size": 767988281,
+        "sha256": "56b9f67d286664485ba7dcb2430a2382f0dc84493ecb871b37d3c9d1109f776d"
+      },
+      {
+        "filename": "Original Dataset.zip",
+        "size": 498097565,
+        "sha256": "9f2a67e6abcc6ac6abe6e2ffb00efc41972383a07381b2f42785c9f0414d5839"
+      }
+    ]
+  },
+  "image_root": "data/raw/original/Original Dataset",
+  "expected_total_stated_by_source": 3116,
+  "observed_total_images": 3116,
+  "matches_stated_total": true,
+  "non_image_files": [],
+  "n_classes": 10,
+  "decode_failures": 0,
+  "empty_files": 0,
+  "exif_orientation_counts": {
+    "1": 3116
+  },
+  "mode_counts": {
+    "RGB": 3116
+  },
+  "exact_duplicate_pairs": 128,
+  "heuristic_near_duplicate_pairs": 47,
+  "heuristic_cross_label_pairs": 1,
+  "group_type_counts": {
+    "singleton": 2777,
+    "verified_exact_duplicate": 126,
+    "heuristic_phash_similarity": 41
+  },
+  "conflicting_label_groups": 1,
+  "excluded_images": {
+    "redundant_exact_copy": 128,
+    "conflicting_label_duplicate_group": 2
+  },
+  "eligible_images": 2986,
+  "eligible_groups": 2943,
+  "per_class": [
+    {
+      "label_original": "Aphids",
+      "images": 224,
+      "eligible": 224,
+      "groups": 216
+    },
+    {
+      "label_original": "Cercospora Leaf Spot",
+      "images": 133,
+      "eligible": 133,
+      "groups": 131
+    },
+    {
+      "label_original": "Defect Eggplant",
+      "images": 450,
+      "eligible": 449,
+      "groups": 444
+    },
+    {
+      "label_original": "Flea Beetles",
+      "images": 353,
+      "eligible": 353,
+      "groups": 347
+    },
+    {
+      "label_original": "Fresh Eggplant",
+      "images": 573,
+      "eligible": 572,
+      "groups": 559
+    },
+    {
+      "label_original": "Fresh Eggplant Leaf",
+      "images": 256,
+      "eligible": 128,
+      "groups": 127
+    },
+    {
+      "label_original": "Leaf Wilt",
+      "images": 85,
+      "eligible": 85,
+      "groups": 84
+    },
+    {
+      "label_original": "Phytophthora Blight",
+      "images": 423,
+      "eligible": 423,
+      "groups": 421
+    },
+    {
+      "label_original": "Powdery Mildew",
+      "images": 213,
+      "eligible": 213,
+      "groups": 211
+    },
+    {
+      "label_original": "Tobacco Mosaic Virus",
+      "images": 406,
+      "eligible": 406,
+      "groups": 405
+    }
+  ],
+  "size_summary": {
+    "min_wh": [
+      800,
+      800
+    ],
+    "max_wh": [
+      800,
+      800
+    ],
+    "distinct_sizes": 1
+  },
+  "notes": [
+    "No specimen/plant/capture metadata is provided by the source; groups are duplicate-screening groups only.",
+    "Heuristic pHash groups are kept within one partition for leakage safety; they are not claimed to be the same specimen."
+  ]
+}

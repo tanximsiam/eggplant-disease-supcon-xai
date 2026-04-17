@@ -1,0 +1,11 @@
+method,rel_path,spearman_trained_vs_random_head,random_head_constant
+ce,Aphids/Aphids_original0081.jpg,-0.16821634752731598,False
+ce,Aphids/Aphids_original0181.jpg,-0.11286374783700406,False
+ce,Aphids/Aphids_original0213.jpg,0.5392181134144735,False
+ce,Aphids/Aphids_original0130.jpg,0.47474262278234747,False
+ce,Aphids/Aphids_original0127.jpg,0.40928077714912,False
+ce,Cercospora Leaf Spot/Cercospora Leaf Spot_original0096.jpg,-0.3665922606830215,False
+ce,Cercospora Leaf Spot/Cercospora Leaf Spot_original0012.jpg,0.06826780382829126,False
+ce,Cercospora Leaf Spot/Cercospora Leaf Spot_original0100.jpg,0.17091127822527014,False
+ce,Cercospora Leaf Spot/Cercospora Leaf Spot_original0027.jpg,-0.013237455327651141,False
+ce,Cercospora Leaf Spot/Cercospora Leaf Spot_original0116.jpg,-0.26710471871448216,False

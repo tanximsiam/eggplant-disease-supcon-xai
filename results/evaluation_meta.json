@@ -1,0 +1,8 @@
+{
+  "complete_matrix": true,
+  "n_completed": 12,
+  "n_total": 12,
+  "test_images": 450,
+  "split_sha256": "87cc82633f7a7de1eaae627daef8c2db3356a2d34f54afb45eb503af5f031f57",
+  "device": "cuda"
+}

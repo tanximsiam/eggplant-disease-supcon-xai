@@ -1,0 +1,57 @@
+{
+  "status": "completed",
+  "runs": {
+    "ce": "ce_f0.20_s42_6b60d8ad64",
+    "supcon": "supcon_f0.20_s42_2e43556c9f"
+  },
+  "subset_size": 50,
+  "auc_direction": "deletion AUC of target-class probability; LOWER = probability falls faster when removing top-ranked pixels (more faithful ranking)",
+  "per_method": {
+    "ce": {
+      "n": 50,
+      "accuracy_on_subset": 0.8,
+      "cam_constant_maps": 0,
+      "spearman_cam_occ_median": 0.26638222314751964,
+      "top20_overlap_cam_occ_mean": 0.3214332882252836,
+      "auc_gradcam_mean_mean": 0.24800491542943157,
+      "auc_occlusion_mean_mean": 0.32799779123716344,
+      "auc_random_mean_mean": 0.4619745321279006,
+      "frac_images_gradcam_beats_random_mean": 0.8,
+      "mean_gap_random_minus_gradcam_mean": 0.21396961669846906,
+      "auc_gradcam_blur_mean": 0.24881822556732158,
+      "auc_occlusion_blur_mean": 0.3428062123986483,
+      "auc_random_blur_mean": 0.5576752725093509,
+      "frac_images_gradcam_beats_random_blur": 0.9,
+      "mean_gap_random_minus_gradcam_blur": 0.3088570469420294,
+      "sanity_spearman_trained_vs_random_head_median": 0.027515174250320053
+    },
+    "supcon": {
+      "n": 50,
+      "accuracy_on_subset": 0.78,
+      "cam_constant_maps": 0,
+      "spearman_cam_occ_median": 0.32365256031472944,
+      "top20_overlap_cam_occ_mean": 0.32631071980148846,
+      "auc_gradcam_mean_mean": 0.23967678120665942,
+      "auc_occlusion_mean_mean": 0.31648955602887663,
+      "auc_random_mean_mean": 0.4352149692514285,
+      "frac_images_gradcam_beats_random_mean": 0.82,
+      "mean_gap_random_minus_gradcam_mean": 0.19553818804476908,
+      "auc_gradcam_blur_mean": 0.24334183568269746,
+      "auc_occlusion_blur_mean": 0.35045189456126075,
+      "auc_random_blur_mean": 0.547505281815402,
+      "frac_images_gradcam_beats_random_blur": 0.96,
+      "mean_gap_random_minus_gradcam_blur": 0.3041634461327045,
+      "sanity_spearman_trained_vs_random_head_median": 0.10056995314092246
+    }
+  },
+  "paired_auc_gradcam_mean_supcon_minus_ce": {
+    "mean": -0.00832813422277214,
+    "median": -0.009014855244299722,
+    "frac_supcon_lower": 0.6
+  },
+  "paired_auc_gradcam_blur_supcon_minus_ce": {
+    "mean": -0.005476389884624064,
+    "median": -0.0073507565044565685,
+    "frac_supcon_lower": 0.54
+  }
+}

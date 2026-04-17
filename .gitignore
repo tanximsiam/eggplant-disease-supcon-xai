@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# raw data, downloaded archives, weights and bulk checkpoints stay out of Git
+data/raw/
+data/cache/
+runs/**/checkpoints/
+exports/
+logs/
+*.pt
+*.pth
+*.zip

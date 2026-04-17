@@ -1,0 +1,16 @@
+true,pred,count
+Powdery Mildew,Tobacco Mosaic Virus,91
+Defect Eggplant,Fresh Eggplant,70
+Fresh Eggplant,Defect Eggplant,68
+Aphids,Flea Beetles,59
+Powdery Mildew,Aphids,42
+Powdery Mildew,Flea Beetles,40
+Aphids,Tobacco Mosaic Virus,34
+Cercospora Leaf Spot,Aphids,33
+Flea Beetles,Aphids,32
+Aphids,Powdery Mildew,22
+Leaf Wilt,Tobacco Mosaic Virus,22
+Leaf Wilt,Phytophthora Blight,20
+Tobacco Mosaic Virus,Phytophthora Blight,19
+Flea Beetles,Cercospora Leaf Spot,18
+Phytophthora Blight,Tobacco Mosaic Virus,18

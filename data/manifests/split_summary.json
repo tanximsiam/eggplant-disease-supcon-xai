@@ -1,0 +1,702 @@
+{
+  "split_seed": 2026,
+  "split_file": "split.csv",
+  "split_sha256": "87cc82633f7a7de1eaae627daef8c2db3356a2d34f54afb45eb503af5f031f57",
+  "rule": "per class, groups shuffled with derive_seed(2026,'split',class), larger groups first; each group assigned to the partition with the largest relative deficit (val/test forced non-empty first)",
+  "support_rule": "per class & seed, groups in derive_seed(seed,'support',class) order; prefix while cumulative <= floor(fraction*n_pool_class), min 1 group; nested by construction",
+  "image_counts": {
+    "train_pool": {
+      "Aphids": 156,
+      "Cercospora Leaf Spot": 93,
+      "Defect Eggplant": 313,
+      "Flea Beetles": 247,
+      "Fresh Eggplant": 400,
+      "Fresh Eggplant Leaf": 89,
+      "Leaf Wilt": 59,
+      "Phytophthora Blight": 295,
+      "Powdery Mildew": 149,
+      "Tobacco Mosaic Virus": 284
+    },
+    "val": {
+      "Aphids": 34,
+      "Cercospora Leaf Spot": 20,
+      "Defect Eggplant": 68,
+      "Flea Beetles": 53,
+      "Fresh Eggplant": 86,
+      "Fresh Eggplant Leaf": 20,
+      "Leaf Wilt": 13,
+      "Phytophthora Blight": 64,
+      "Powdery Mildew": 32,
+      "Tobacco Mosaic Virus": 61
+    },
+    "test": {
+      "Aphids": 34,
+      "Cercospora Leaf Spot": 20,
+      "Defect Eggplant": 68,
+      "Flea Beetles": 53,
+      "Fresh Eggplant": 86,
+      "Fresh Eggplant Leaf": 19,
+      "Leaf Wilt": 13,
+      "Phytophthora Blight": 64,
+      "Powdery Mildew": 32,
+      "Tobacco Mosaic Virus": 61
+    }
+  },
+  "group_counts": {
+    "train_pool": {
+      "Aphids": 151,
+      "Cercospora Leaf Spot": 93,
+      "Defect Eggplant": 310,
+      "Flea Beetles": 243,
+      "Fresh Eggplant": 391,
+      "Fresh Eggplant Leaf": 89,
+      "Leaf Wilt": 59,
+      "Phytophthora Blight": 295,
+      "Powdery Mildew": 149,
+      "Tobacco Mosaic Virus": 284
+    },
+    "val": {
+      "Aphids": 32,
+      "Cercospora Leaf Spot": 19,
+      "Defect Eggplant": 66,
+      "Flea Beetles": 52,
+      "Fresh Eggplant": 83,
+      "Fresh Eggplant Leaf": 19,
+      "Leaf Wilt": 12,
+      "Phytophthora Blight": 63,
+      "Powdery Mildew": 31,
+      "Tobacco Mosaic Virus": 60
+    },
+    "test": {
+      "Aphids": 33,
+      "Cercospora Leaf Spot": 19,
+      "Defect Eggplant": 67,
+      "Flea Beetles": 52,
+      "Fresh Eggplant": 84,
+      "Fresh Eggplant Leaf": 19,
+      "Leaf Wilt": 13,
+      "Phytophthora Blight": 63,
+      "Powdery Mildew": 31,
+      "Tobacco Mosaic Virus": 61
+    }
+  },
+  "totals": {
+    "train_pool": 2085,
+    "val": 451,
+    "test": 450
+  },
+  "group_totals": {
+    "train_pool": 2064,
+    "val": 437,
+    "test": 442
+  },
+  "excluded_before_split": 130,
+  "supports": {
+    "f0.10_s17": {
+      "fraction": 0.1,
+      "seed": 17,
+      "file": "support_f0.10_s17.csv",
+      "sha256": "2cf01fc4f0bb161c83e22dabd797ab2fff61cdc5083eb205c61ba7038d20d40f",
+      "total_images": 203,
+      "total_groups": 203,
+      "realized_fraction": 0.0974,
+      "per_class": [
+        {
+          "class_id": 0,
+          "label": "Aphids",
+          "pool_images": 156,
+          "target_floor": 15,
+          "selected_images": 15,
+          "selected_groups": 15,
+          "realized_fraction": 0.0962
+        },
+        {
+          "class_id": 1,
+          "label": "Cercospora Leaf Spot",
+          "pool_images": 93,
+          "target_floor": 9,
+          "selected_images": 9,
+          "selected_groups": 9,
+          "realized_fraction": 0.0968
+        },
+        {
+          "class_id": 2,
+          "label": "Defect Eggplant",
+          "pool_images": 313,
+          "target_floor": 31,
+          "selected_images": 31,
+          "selected_groups": 31,
+          "realized_fraction": 0.099
+        },
+        {
+          "class_id": 3,
+          "label": "Flea Beetles",
+          "pool_images": 247,
+          "target_floor": 24,
+          "selected_images": 24,
+          "selected_groups": 24,
+          "realized_fraction": 0.0972
+        },
+        {
+          "class_id": 4,
+          "label": "Fresh Eggplant",
+          "pool_images": 400,
+          "target_floor": 40,
+          "selected_images": 40,
+          "selected_groups": 40,
+          "realized_fraction": 0.1
+        },
+        {
+          "class_id": 5,
+          "label": "Fresh Eggplant Leaf",
+          "pool_images": 89,
+          "target_floor": 8,
+          "selected_images": 8,
+          "selected_groups": 8,
+          "realized_fraction": 0.0899
+        },
+        {
+          "class_id": 6,
+          "label": "Leaf Wilt",
+          "pool_images": 59,
+          "target_floor": 5,
+          "selected_images": 5,
+          "selected_groups": 5,
+          "realized_fraction": 0.0847
+        },
+        {
+          "class_id": 7,
+          "label": "Phytophthora Blight",
+          "pool_images": 295,
+          "target_floor": 29,
+          "selected_images": 29,
+          "selected_groups": 29,
+          "realized_fraction": 0.0983
+        },
+        {
+          "class_id": 8,
+          "label": "Powdery Mildew",
+          "pool_images": 149,
+          "target_floor": 14,
+          "selected_images": 14,
+          "selected_groups": 14,
+          "realized_fraction": 0.094
+        },
+        {
+          "class_id": 9,
+          "label": "Tobacco Mosaic Virus",
+          "pool_images": 284,
+          "target_floor": 28,
+          "selected_images": 28,
+          "selected_groups": 28,
+          "realized_fraction": 0.0986
+        }
+      ]
+    },
+    "f0.20_s17": {
+      "fraction": 0.2,
+      "seed": 17,
+      "file": "support_f0.20_s17.csv",
+      "sha256": "9179800cd43e94a86b2edabfc6b9b81ea8e724f074a1b4c04ce552c8e7ee25ec",
+      "total_images": 412,
+      "total_groups": 410,
+      "realized_fraction": 0.1976,
+      "per_class": [
+        {
+          "class_id": 0,
+          "label": "Aphids",
+          "pool_images": 156,
+          "target_floor": 31,
+          "selected_images": 31,
+          "selected_groups": 31,
+          "realized_fraction": 0.1987
+        },
+        {
+          "class_id": 1,
+          "label": "Cercospora Leaf Spot",
+          "pool_images": 93,
+          "target_floor": 18,
+          "selected_images": 18,
+          "selected_groups": 18,
+          "realized_fraction": 0.1935
+        },
+        {
+          "class_id": 2,
+          "label": "Defect Eggplant",
+          "pool_images": 313,
+          "target_floor": 62,
+          "selected_images": 62,
+          "selected_groups": 61,
+          "realized_fraction": 0.1981
+        },
+        {
+          "class_id": 3,
+          "label": "Flea Beetles",
+          "pool_images": 247,
+          "target_floor": 49,
+          "selected_images": 49,
+          "selected_groups": 49,
+          "realized_fraction": 0.1984
+        },
+        {
+          "class_id": 4,
+          "label": "Fresh Eggplant",
+          "pool_images": 400,
+          "target_floor": 80,
+          "selected_images": 80,
+          "selected_groups": 79,
+          "realized_fraction": 0.2
+        },
+        {
+          "class_id": 5,
+          "label": "Fresh Eggplant Leaf",
+          "pool_images": 89,
+          "target_floor": 17,
+          "selected_images": 17,
+          "selected_groups": 17,
+          "realized_fraction": 0.191
+        },
+        {
+          "class_id": 6,
+          "label": "Leaf Wilt",
+          "pool_images": 59,
+          "target_floor": 11,
+          "selected_images": 11,
+          "selected_groups": 11,
+          "realized_fraction": 0.1864
+        },
+        {
+          "class_id": 7,
+          "label": "Phytophthora Blight",
+          "pool_images": 295,
+          "target_floor": 59,
+          "selected_images": 59,
+          "selected_groups": 59,
+          "realized_fraction": 0.2
+        },
+        {
+          "class_id": 8,
+          "label": "Powdery Mildew",
+          "pool_images": 149,
+          "target_floor": 29,
+          "selected_images": 29,
+          "selected_groups": 29,
+          "realized_fraction": 0.1946
+        },
+        {
+          "class_id": 9,
+          "label": "Tobacco Mosaic Virus",
+          "pool_images": 284,
+          "target_floor": 56,
+          "selected_images": 56,
+          "selected_groups": 56,
+          "realized_fraction": 0.1972
+        }
+      ]
+    },
+    "f0.10_s42": {
+      "fraction": 0.1,
+      "seed": 42,
+      "file": "support_f0.10_s42.csv",
+      "sha256": "620b60d3c126a2e22ddc78cbb0db7e2c717ec41fa5843573109c48722b8e053d",
+      "total_images": 203,
+      "total_groups": 202,
+      "realized_fraction": 0.0974,
+      "per_class": [
+        {
+          "class_id": 0,
+          "label": "Aphids",
+          "pool_images": 156,
+          "target_floor": 15,
+          "selected_images": 15,
+          "selected_groups": 14,
+          "realized_fraction": 0.0962
+        },
+        {
+          "class_id": 1,
+          "label": "Cercospora Leaf Spot",
+          "pool_images": 93,
+          "target_floor": 9,
+          "selected_images": 9,
+          "selected_groups": 9,
+          "realized_fraction": 0.0968
+        },
+        {
+          "class_id": 2,
+          "label": "Defect Eggplant",
+          "pool_images": 313,
+          "target_floor": 31,
+          "selected_images": 31,
+          "selected_groups": 31,
+          "realized_fraction": 0.099
+        },
+        {
+          "class_id": 3,
+          "label": "Flea Beetles",
+          "pool_images": 247,
+          "target_floor": 24,
+          "selected_images": 24,
+          "selected_groups": 24,
+          "realized_fraction": 0.0972
+        },
+        {
+          "class_id": 4,
+          "label": "Fresh Eggplant",
+          "pool_images": 400,
+          "target_floor": 40,
+          "selected_images": 40,
+          "selected_groups": 40,
+          "realized_fraction": 0.1
+        },
+        {
+          "class_id": 5,
+          "label": "Fresh Eggplant Leaf",
+          "pool_images": 89,
+          "target_floor": 8,
+          "selected_images": 8,
+          "selected_groups": 8,
+          "realized_fraction": 0.0899
+        },
+        {
+          "class_id": 6,
+          "label": "Leaf Wilt",
+          "pool_images": 59,
+          "target_floor": 5,
+          "selected_images": 5,
+          "selected_groups": 5,
+          "realized_fraction": 0.0847
+        },
+        {
+          "class_id": 7,
+          "label": "Phytophthora Blight",
+          "pool_images": 295,
+          "target_floor": 29,
+          "selected_images": 29,
+          "selected_groups": 29,
+          "realized_fraction": 0.0983
+        },
+        {
+          "class_id": 8,
+          "label": "Powdery Mildew",
+          "pool_images": 149,
+          "target_floor": 14,
+          "selected_images": 14,
+          "selected_groups": 14,
+          "realized_fraction": 0.094
+        },
+        {
+          "class_id": 9,
+          "label": "Tobacco Mosaic Virus",
+          "pool_images": 284,
+          "target_floor": 28,
+          "selected_images": 28,
+          "selected_groups": 28,
+          "realized_fraction": 0.0986
+        }
+      ]
+    },
+    "f0.20_s42": {
+      "fraction": 0.2,
+      "seed": 42,
+      "file": "support_f0.20_s42.csv",
+      "sha256": "2897aa60b4701147fd9fc1380bd320ffdd300a20ea2e9b779ecb434980191309",
+      "total_images": 412,
+      "total_groups": 407,
+      "realized_fraction": 0.1976,
+      "per_class": [
+        {
+          "class_id": 0,
+          "label": "Aphids",
+          "pool_images": 156,
+          "target_floor": 31,
+          "selected_images": 31,
+          "selected_groups": 29,
+          "realized_fraction": 0.1987
+        },
+        {
+          "class_id": 1,
+          "label": "Cercospora Leaf Spot",
+          "pool_images": 93,
+          "target_floor": 18,
+          "selected_images": 18,
+          "selected_groups": 18,
+          "realized_fraction": 0.1935
+        },
+        {
+          "class_id": 2,
+          "label": "Defect Eggplant",
+          "pool_images": 313,
+          "target_floor": 62,
+          "selected_images": 62,
+          "selected_groups": 61,
+          "realized_fraction": 0.1981
+        },
+        {
+          "class_id": 3,
+          "label": "Flea Beetles",
+          "pool_images": 247,
+          "target_floor": 49,
+          "selected_images": 49,
+          "selected_groups": 48,
+          "realized_fraction": 0.1984
+        },
+        {
+          "class_id": 4,
+          "label": "Fresh Eggplant",
+          "pool_images": 400,
+          "target_floor": 80,
+          "selected_images": 80,
+          "selected_groups": 79,
+          "realized_fraction": 0.2
+        },
+        {
+          "class_id": 5,
+          "label": "Fresh Eggplant Leaf",
+          "pool_images": 89,
+          "target_floor": 17,
+          "selected_images": 17,
+          "selected_groups": 17,
+          "realized_fraction": 0.191
+        },
+        {
+          "class_id": 6,
+          "label": "Leaf Wilt",
+          "pool_images": 59,
+          "target_floor": 11,
+          "selected_images": 11,
+          "selected_groups": 11,
+          "realized_fraction": 0.1864
+        },
+        {
+          "class_id": 7,
+          "label": "Phytophthora Blight",
+          "pool_images": 295,
+          "target_floor": 59,
+          "selected_images": 59,
+          "selected_groups": 59,
+          "realized_fraction": 0.2
+        },
+        {
+          "class_id": 8,
+          "label": "Powdery Mildew",
+          "pool_images": 149,
+          "target_floor": 29,
+          "selected_images": 29,
+          "selected_groups": 29,
+          "realized_fraction": 0.1946
+        },
+        {
+          "class_id": 9,
+          "label": "Tobacco Mosaic Virus",
+          "pool_images": 284,
+          "target_floor": 56,
+          "selected_images": 56,
+          "selected_groups": 56,
+          "realized_fraction": 0.1972
+        }
+      ]
+    },
+    "f0.10_s2026": {
+      "fraction": 0.1,
+      "seed": 2026,
+      "file": "support_f0.10_s2026.csv",
+      "sha256": "3221fa6e7ae99997714b870d79019ed30279f06fa6201702ba5f618fa2dcd3c4",
+      "total_images": 203,
+      "total_groups": 201,
+      "realized_fraction": 0.0974,
+      "per_class": [
+        {
+          "class_id": 0,
+          "label": "Aphids",
+          "pool_images": 156,
+          "target_floor": 15,
+          "selected_images": 15,
+          "selected_groups": 15,
+          "realized_fraction": 0.0962
+        },
+        {
+          "class_id": 1,
+          "label": "Cercospora Leaf Spot",
+          "pool_images": 93,
+          "target_floor": 9,
+          "selected_images": 9,
+          "selected_groups": 9,
+          "realized_fraction": 0.0968
+        },
+        {
+          "class_id": 2,
+          "label": "Defect Eggplant",
+          "pool_images": 313,
+          "target_floor": 31,
+          "selected_images": 31,
+          "selected_groups": 31,
+          "realized_fraction": 0.099
+        },
+        {
+          "class_id": 3,
+          "label": "Flea Beetles",
+          "pool_images": 247,
+          "target_floor": 24,
+          "selected_images": 24,
+          "selected_groups": 24,
+          "realized_fraction": 0.0972
+        },
+        {
+          "class_id": 4,
+          "label": "Fresh Eggplant",
+          "pool_images": 400,
+          "target_floor": 40,
+          "selected_images": 40,
+          "selected_groups": 38,
+          "realized_fraction": 0.1
+        },
+        {
+          "class_id": 5,
+          "label": "Fresh Eggplant Leaf",
+          "pool_images": 89,
+          "target_floor": 8,
+          "selected_images": 8,
+          "selected_groups": 8,
+          "realized_fraction": 0.0899
+        },
+        {
+          "class_id": 6,
+          "label": "Leaf Wilt",
+          "pool_images": 59,
+          "target_floor": 5,
+          "selected_images": 5,
+          "selected_groups": 5,
+          "realized_fraction": 0.0847
+        },
+        {
+          "class_id": 7,
+          "label": "Phytophthora Blight",
+          "pool_images": 295,
+          "target_floor": 29,
+          "selected_images": 29,
+          "selected_groups": 29,
+          "realized_fraction": 0.0983
+        },
+        {
+          "class_id": 8,
+          "label": "Powdery Mildew",
+          "pool_images": 149,
+          "target_floor": 14,
+          "selected_images": 14,
+          "selected_groups": 14,
+          "realized_fraction": 0.094
+        },
+        {
+          "class_id": 9,
+          "label": "Tobacco Mosaic Virus",
+          "pool_images": 284,
+          "target_floor": 28,
+          "selected_images": 28,
+          "selected_groups": 28,
+          "realized_fraction": 0.0986
+        }
+      ]
+    },
+    "f0.20_s2026": {
+      "fraction": 0.2,
+      "seed": 2026,
+      "file": "support_f0.20_s2026.csv",
+      "sha256": "97982e9e4ece31cde320347a0886b46bce50da2b9c11ae211d46a013f472453d",
+      "total_images": 412,
+      "total_groups": 406,
+      "realized_fraction": 0.1976,
+      "per_class": [
+        {
+          "class_id": 0,
+          "label": "Aphids",
+          "pool_images": 156,
+          "target_floor": 31,
+          "selected_images": 31,
+          "selected_groups": 30,
+          "realized_fraction": 0.1987
+        },
+        {
+          "class_id": 1,
+          "label": "Cercospora Leaf Spot",
+          "pool_images": 93,
+          "target_floor": 18,
+          "selected_images": 18,
+          "selected_groups": 18,
+          "realized_fraction": 0.1935
+        },
+        {
+          "class_id": 2,
+          "label": "Defect Eggplant",
+          "pool_images": 313,
+          "target_floor": 62,
+          "selected_images": 62,
+          "selected_groups": 61,
+          "realized_fraction": 0.1981
+        },
+        {
+          "class_id": 3,
+          "label": "Flea Beetles",
+          "pool_images": 247,
+          "target_floor": 49,
+          "selected_images": 49,
+          "selected_groups": 48,
+          "realized_fraction": 0.1984
+        },
+        {
+          "class_id": 4,
+          "label": "Fresh Eggplant",
+          "pool_images": 400,
+          "target_floor": 80,
+          "selected_images": 80,
+          "selected_groups": 77,
+          "realized_fraction": 0.2
+        },
+        {
+          "class_id": 5,
+          "label": "Fresh Eggplant Leaf",
+          "pool_images": 89,
+          "target_floor": 17,
+          "selected_images": 17,
+          "selected_groups": 17,
+          "realized_fraction": 0.191
+        },
+        {
+          "class_id": 6,
+          "label": "Leaf Wilt",
+          "pool_images": 59,
+          "target_floor": 11,
+          "selected_images": 11,
+          "selected_groups": 11,
+          "realized_fraction": 0.1864
+        },
+        {
+          "class_id": 7,
+          "label": "Phytophthora Blight",
+          "pool_images": 295,
+          "target_floor": 59,
+          "selected_images": 59,
+          "selected_groups": 59,
+          "realized_fraction": 0.2
+        },
+        {
+          "class_id": 8,
+          "label": "Powdery Mildew",
+          "pool_images": 149,
+          "target_floor": 29,
+          "selected_images": 29,
+          "selected_groups": 29,
+          "realized_fraction": 0.1946
+        },
+        {
+          "class_id": 9,
+          "label": "Tobacco Mosaic Virus",
+          "pool_images": 284,
+          "target_floor": 56,
+          "selected_images": 56,
+          "selected_groups": 56,
+          "realized_fraction": 0.1972
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "method": "ce",
+  "fraction": 0.1,
+  "seed": 17,
+  "train": {
+    "image_size": 224,
+    "batch_size": 16,
+    "rep_epochs": 30,
+    "ft_epochs": 15,
+    "lr_encoder": 0.0001,
+    "lr_head": 0.001,
+    "weight_decay": 0.0001,
+    "temperature": 0.1,
+    "proj_hidden": 1280,
+    "proj_dim": 128,
+    "amp": true,
+    "freeze_bn_stats": true,
+    "num_workers": 4,
+    "aug": {
+      "rrc_scale": [
+        0.6,
+        1.0
+      ],
+      "rotation_deg": 15,
+      "color_jitter": {
+        "brightness": 0.2,
+        "contrast": 0.2,
+        "saturation": 0.15,
+        "hue": 0.02
+      }
+    }
+  },
+  "split_sha256": "87cc82633f7a7de1eaae627daef8c2db3356a2d34f54afb45eb503af5f031f57",
+  "support_sha256": "2cf01fc4f0bb161c83e22dabd797ab2fff61cdc5083eb205c61ba7038d20d40f",
+  "support_file": "support_f0.10_s17.csv",
+  "class_map_sha256": "fd226380ac8e4a53df168a49b106d8b3fdf70e761ecf1e8a2f999054fcdbc6ff",
+  "protocol_version": 1,
+  "run_id": "ce_f0.10_s17_b5134dc8f2"
+}

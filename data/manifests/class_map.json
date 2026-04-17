@@ -1,0 +1,52 @@
+[
+  {
+    "class_id": 0,
+    "folder_name": "Aphids",
+    "display_name": "Aphids"
+  },
+  {
+    "class_id": 1,
+    "folder_name": "Cercospora Leaf Spot",
+    "display_name": "Cercospora Leaf Spot"
+  },
+  {
+    "class_id": 2,
+    "folder_name": "Defect Eggplant",
+    "display_name": "Defect Eggplant"
+  },
+  {
+    "class_id": 3,
+    "folder_name": "Flea Beetles",
+    "display_name": "Flea Beetles"
+  },
+  {
+    "class_id": 4,
+    "folder_name": "Fresh Eggplant",
+    "display_name": "Fresh Eggplant"
+  },
+  {
+    "class_id": 5,
+    "folder_name": "Fresh Eggplant Leaf",
+    "display_name": "Fresh Eggplant Leaf"
+  },
+  {
+    "class_id": 6,
+    "folder_name": "Leaf Wilt",
+    "display_name": "Leaf Wilt"
+  },
+  {
+    "class_id": 7,
+    "folder_name": "Phytophthora Blight",
+    "display_name": "Phytophthora Blight"
+  },
+  {
+    "class_id": 8,
+    "folder_name": "Powdery Mildew",
+    "display_name": "Powdery Mildew"
+  },
+  {
+    "class_id": 9,
+    "folder_name": "Tobacco Mosaic Virus",
+    "display_name": "Tobacco Mosaic Virus"
+  }
+]

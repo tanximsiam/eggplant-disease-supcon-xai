@@ -1,0 +1,53 @@
+# Frozen experiment configuration. Changing any `train` value changes run IDs.
+data:
+  mendeley_id: 5drkk544k8
+  version: 1
+  archive_name: Original Dataset.zip   # ONLY original images; the augmented archive is never used
+  raw_dir: data/raw                    # can point to a local copy (must contain original/ after extraction)
+  cache_dir: data/cache                # EXIF-corrected RGB, shorter side resized to cache_short_side
+  cache_short_side: 256
+  manifest_dir: data/manifests
+
+audit:
+  phash_near_dup_threshold: 4      # Hamming distance on 64-bit pHash (incl. flips/rotations) -> heuristic group
+  contact_sheet_max_pairs: 60
+
+split:
+  seed: 2026
+  fractions: {train_pool: 0.70, val: 0.15, test: 0.15}
+
+experiment:
+  methods: [ce, supcon]
+  train_fractions: [0.1, 0.2]
+  seeds: [17, 42, 2026]
+  min_per_class: 1
+
+train:
+  image_size: 224
+  batch_size: 16               # source images per batch (x2 augmented views in the representation phase)
+  rep_epochs: 30
+  ft_epochs: 15
+  lr_encoder: 1.0e-4
+  lr_head: 1.0e-3
+  weight_decay: 1.0e-4
+  temperature: 0.1
+  proj_hidden: 1280
+  proj_dim: 128
+  amp: true
+  freeze_bn_stats: true        # BN running stats frozen (eval mode); BN affine params remain trainable
+  num_workers: 4
+  aug:
+    rrc_scale: [0.6, 1.0]
+    rotation_deg: 15
+    color_jitter: {brightness: 0.2, contrast: 0.2, saturation: 0.15, hue: 0.02}
+
+xai:
+  train_fraction: 0.2
+  seed: 42
+  per_class: 5
+  occlusion_patch: 32
+  occlusion_stride: 16
+  deletion_steps: 20           # 0%,5%,...,100% of pixels removed
+  random_control_seeds: [0, 1, 2, 3, 4]
+  blur_sigma: 10.0
+  sanity_examples: 10

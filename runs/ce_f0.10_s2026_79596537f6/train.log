@@ -1,0 +1,46 @@
+[10:37:56]   [ce_f0.10_s2026_79596537f6] rep 1/30 loss=1.6159 elapsed=0.1m eta~3.0m
+[10:37:57]   [ce_f0.10_s2026_79596537f6] rep 2/30 loss=1.0507 elapsed=0.1m eta~1.9m
+[10:37:58]   [ce_f0.10_s2026_79596537f6] rep 3/30 loss=0.6788 elapsed=0.1m eta~1.5m
+[10:37:59]   [ce_f0.10_s2026_79596537f6] rep 4/30 loss=0.5101 elapsed=0.1m eta~1.3m
+[10:38:00]   [ce_f0.10_s2026_79596537f6] rep 5/30 loss=0.4143 elapsed=0.1m eta~1.2m
+[10:38:02]   [ce_f0.10_s2026_79596537f6] rep 6/30 loss=0.2895 elapsed=0.2m eta~1.1m
+[10:38:03]   [ce_f0.10_s2026_79596537f6] rep 7/30 loss=0.1994 elapsed=0.2m eta~1.0m
+[10:38:04]   [ce_f0.10_s2026_79596537f6] rep 8/30 loss=0.1085 elapsed=0.2m eta~1.0m
+[10:38:05]   [ce_f0.10_s2026_79596537f6] rep 9/30 loss=0.1583 elapsed=0.2m eta~0.9m
+[10:38:06]   [ce_f0.10_s2026_79596537f6] rep 10/30 loss=0.1466 elapsed=0.2m eta~0.9m
+[10:38:08]   [ce_f0.10_s2026_79596537f6] rep 11/30 loss=0.1491 elapsed=0.3m eta~0.8m
+[10:38:09]   [ce_f0.10_s2026_79596537f6] rep 12/30 loss=0.0960 elapsed=0.3m eta~0.8m
+[10:38:10]   [ce_f0.10_s2026_79596537f6] rep 13/30 loss=0.0828 elapsed=0.3m eta~0.7m
+[10:38:11]   [ce_f0.10_s2026_79596537f6] rep 14/30 loss=0.0546 elapsed=0.3m eta~0.7m
+[10:38:12]   [ce_f0.10_s2026_79596537f6] rep 15/30 loss=0.0540 elapsed=0.3m eta~0.7m
+[10:38:14]   [ce_f0.10_s2026_79596537f6] rep 16/30 loss=0.0311 elapsed=0.4m eta~0.7m
+[10:38:15]   [ce_f0.10_s2026_79596537f6] rep 17/30 loss=0.0181 elapsed=0.4m eta~0.6m
+[10:38:16]   [ce_f0.10_s2026_79596537f6] rep 18/30 loss=0.0182 elapsed=0.4m eta~0.6m
+[10:38:17]   [ce_f0.10_s2026_79596537f6] rep 19/30 loss=0.0129 elapsed=0.4m eta~0.6m
+[10:38:18]   [ce_f0.10_s2026_79596537f6] rep 20/30 loss=0.0199 elapsed=0.4m eta~0.6m
+[10:38:22]   [ce_f0.10_s2026_79596537f6] rep 21/30 loss=0.0135 elapsed=0.5m eta~0.6m
+[10:38:23]   [ce_f0.10_s2026_79596537f6] rep 22/30 loss=0.0115 elapsed=0.5m eta~0.6m
+[10:38:25]   [ce_f0.10_s2026_79596537f6] rep 23/30 loss=0.0127 elapsed=0.5m eta~0.5m
+[10:38:26]   [ce_f0.10_s2026_79596537f6] rep 24/30 loss=0.0113 elapsed=0.6m eta~0.5m
+[10:38:27]   [ce_f0.10_s2026_79596537f6] rep 25/30 loss=0.0076 elapsed=0.6m eta~0.5m
+[10:38:31]   [ce_f0.10_s2026_79596537f6] rep 26/30 loss=0.0145 elapsed=0.7m eta~0.5m
+[10:38:32]   [ce_f0.10_s2026_79596537f6] rep 27/30 loss=0.0117 elapsed=0.7m eta~0.5m
+[10:38:34]   [ce_f0.10_s2026_79596537f6] rep 28/30 loss=0.0129 elapsed=0.7m eta~0.4m
+[10:38:35]   [ce_f0.10_s2026_79596537f6] rep 29/30 loss=0.0093 elapsed=0.7m eta~0.4m
+[10:38:36]   [ce_f0.10_s2026_79596537f6] rep 30/30 loss=0.0064 elapsed=0.7m eta~0.4m
+[10:38:36]   [ce_f0.10_s2026_79596537f6] representation phase done -> shared CE fine-tuning
+[10:38:37]   [ce_f0.10_s2026_79596537f6] ft 1/15 train_loss=1.8525 val_loss=0.8519 val_macroF1=0.5829 val_acc=0.7317  *best*  eta~0.3m
+[10:38:39]   [ce_f0.10_s2026_79596537f6] ft 2/15 train_loss=0.5246 val_loss=0.5676 val_macroF1=0.7508 val_acc=0.8248  *best*  eta~0.3m
+[10:38:40]   [ce_f0.10_s2026_79596537f6] ft 3/15 train_loss=0.2200 val_loss=0.6072 val_macroF1=0.7659 val_acc=0.8226  *best*  eta~0.3m
+[10:38:42]   [ce_f0.10_s2026_79596537f6] ft 4/15 train_loss=0.1816 val_loss=0.5763 val_macroF1=0.7828 val_acc=0.8160  *best*  eta~0.3m
+[10:38:43]   [ce_f0.10_s2026_79596537f6] ft 5/15 train_loss=0.1255 val_loss=0.5822 val_macroF1=0.7069 val_acc=0.8027  eta~0.2m
+[10:38:45]   [ce_f0.10_s2026_79596537f6] ft 6/15 train_loss=0.1328 val_loss=0.5206 val_macroF1=0.8083 val_acc=0.8581  *best*  eta~0.2m
+[10:38:46]   [ce_f0.10_s2026_79596537f6] ft 7/15 train_loss=0.0700 val_loss=0.6547 val_macroF1=0.7554 val_acc=0.8293  eta~0.2m
+[10:38:48]   [ce_f0.10_s2026_79596537f6] ft 8/15 train_loss=0.0539 val_loss=0.5742 val_macroF1=0.7991 val_acc=0.8492  eta~0.2m
+[10:38:49]   [ce_f0.10_s2026_79596537f6] ft 9/15 train_loss=0.0354 val_loss=0.5616 val_macroF1=0.7929 val_acc=0.8537  eta~0.1m
+[10:38:51]   [ce_f0.10_s2026_79596537f6] ft 10/15 train_loss=0.0224 val_loss=0.5384 val_macroF1=0.7789 val_acc=0.8359  eta~0.1m
+[10:38:52]   [ce_f0.10_s2026_79596537f6] ft 11/15 train_loss=0.0224 val_loss=0.6234 val_macroF1=0.7813 val_acc=0.8381  eta~0.1m
+[10:38:54]   [ce_f0.10_s2026_79596537f6] ft 12/15 train_loss=0.0117 val_loss=0.5927 val_macroF1=0.8048 val_acc=0.8559  eta~0.1m
+[10:38:55]   [ce_f0.10_s2026_79596537f6] ft 13/15 train_loss=0.0253 val_loss=0.5634 val_macroF1=0.7895 val_acc=0.8492  eta~0.0m
+[10:38:58]   [ce_f0.10_s2026_79596537f6] ft 14/15 train_loss=0.0275 val_loss=0.5555 val_macroF1=0.7919 val_acc=0.8514  eta~0.0m
+[10:39:00]   [ce_f0.10_s2026_79596537f6] ft 15/15 train_loss=0.0163 val_loss=0.5544 val_macroF1=0.7887 val_acc=0.8492  eta~0.0m

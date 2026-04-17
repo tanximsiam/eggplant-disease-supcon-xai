@@ -1,0 +1,46 @@
+[10:33:59]   [supcon_f0.10_s42_a815e802a7] rep 1/30 loss=2.4410 elapsed=0.0m eta~1.0m
+[10:34:00]   [supcon_f0.10_s42_a815e802a7] rep 2/30 loss=2.2755 elapsed=0.0m eta~0.9m
+[10:34:01]   [supcon_f0.10_s42_a815e802a7] rep 3/30 loss=2.1964 elapsed=0.1m eta~0.9m
+[10:34:02]   [supcon_f0.10_s42_a815e802a7] rep 4/30 loss=2.0652 elapsed=0.1m eta~0.9m
+[10:34:04]   [supcon_f0.10_s42_a815e802a7] rep 5/30 loss=1.8739 elapsed=0.1m eta~0.8m
+[10:34:05]   [supcon_f0.10_s42_a815e802a7] rep 6/30 loss=1.7611 elapsed=0.1m eta~0.8m
+[10:34:06]   [supcon_f0.10_s42_a815e802a7] rep 7/30 loss=1.7826 elapsed=0.1m eta~0.8m
+[10:34:07]   [supcon_f0.10_s42_a815e802a7] rep 8/30 loss=1.6676 elapsed=0.2m eta~0.8m
+[10:34:08]   [supcon_f0.10_s42_a815e802a7] rep 9/30 loss=1.6516 elapsed=0.2m eta~0.7m
+[10:34:13]   [supcon_f0.10_s42_a815e802a7] rep 10/30 loss=1.6692 elapsed=0.3m eta~0.9m
+[10:34:15]   [supcon_f0.10_s42_a815e802a7] rep 11/30 loss=1.7249 elapsed=0.3m eta~0.9m
+[10:34:16]   [supcon_f0.10_s42_a815e802a7] rep 12/30 loss=1.5807 elapsed=0.3m eta~0.8m
+[10:34:17]   [supcon_f0.10_s42_a815e802a7] rep 13/30 loss=1.5168 elapsed=0.3m eta~0.8m
+[10:34:18]   [supcon_f0.10_s42_a815e802a7] rep 14/30 loss=1.5830 elapsed=0.3m eta~0.8m
+[10:34:19]   [supcon_f0.10_s42_a815e802a7] rep 15/30 loss=1.4448 elapsed=0.4m eta~0.7m
+[10:34:20]   [supcon_f0.10_s42_a815e802a7] rep 16/30 loss=1.4503 elapsed=0.4m eta~0.7m
+[10:34:24]   [supcon_f0.10_s42_a815e802a7] rep 17/30 loss=1.4301 elapsed=0.5m eta~0.7m
+[10:34:26]   [supcon_f0.10_s42_a815e802a7] rep 18/30 loss=1.4019 elapsed=0.5m eta~0.7m
+[10:34:27]   [supcon_f0.10_s42_a815e802a7] rep 19/30 loss=1.3224 elapsed=0.5m eta~0.7m
+[10:34:28]   [supcon_f0.10_s42_a815e802a7] rep 20/30 loss=1.4165 elapsed=0.5m eta~0.6m
+[10:34:29]   [supcon_f0.10_s42_a815e802a7] rep 21/30 loss=1.3315 elapsed=0.5m eta~0.6m
+[10:34:30]   [supcon_f0.10_s42_a815e802a7] rep 22/30 loss=1.3237 elapsed=0.5m eta~0.6m
+[10:34:31]   [supcon_f0.10_s42_a815e802a7] rep 23/30 loss=1.3622 elapsed=0.6m eta~0.5m
+[10:34:32]   [supcon_f0.10_s42_a815e802a7] rep 24/30 loss=1.2875 elapsed=0.6m eta~0.5m
+[10:34:37]   [supcon_f0.10_s42_a815e802a7] rep 25/30 loss=1.3968 elapsed=0.7m eta~0.5m
+[10:34:39]   [supcon_f0.10_s42_a815e802a7] rep 26/30 loss=1.3621 elapsed=0.7m eta~0.5m
+[10:34:40]   [supcon_f0.10_s42_a815e802a7] rep 27/30 loss=1.3271 elapsed=0.7m eta~0.5m
+[10:34:41]   [supcon_f0.10_s42_a815e802a7] rep 28/30 loss=1.3626 elapsed=0.7m eta~0.4m
+[10:34:42]   [supcon_f0.10_s42_a815e802a7] rep 29/30 loss=1.2898 elapsed=0.8m eta~0.4m
+[10:34:43]   [supcon_f0.10_s42_a815e802a7] rep 30/30 loss=1.3481 elapsed=0.8m eta~0.4m
+[10:34:44]   [supcon_f0.10_s42_a815e802a7] representation phase done -> shared CE fine-tuning
+[10:34:45]   [supcon_f0.10_s42_a815e802a7] ft 1/15 train_loss=1.6593 val_loss=0.9087 val_macroF1=0.5392 val_acc=0.7317  *best*  eta~0.4m
+[10:34:46]   [supcon_f0.10_s42_a815e802a7] ft 2/15 train_loss=0.5715 val_loss=0.7501 val_macroF1=0.6233 val_acc=0.7384  *best*  eta~0.3m
+[10:34:47]   [supcon_f0.10_s42_a815e802a7] ft 3/15 train_loss=0.3170 val_loss=0.5066 val_macroF1=0.6997 val_acc=0.7982  *best*  eta~0.3m
+[10:34:49]   [supcon_f0.10_s42_a815e802a7] ft 4/15 train_loss=0.2055 val_loss=0.4769 val_macroF1=0.7528 val_acc=0.8093  *best*  eta~0.3m
+[10:34:50]   [supcon_f0.10_s42_a815e802a7] ft 5/15 train_loss=0.1285 val_loss=0.5301 val_macroF1=0.7582 val_acc=0.8204  *best*  eta~0.3m
+[10:34:51]   [supcon_f0.10_s42_a815e802a7] ft 6/15 train_loss=0.1255 val_loss=0.5496 val_macroF1=0.7426 val_acc=0.8160  eta~0.2m
+[10:34:53]   [supcon_f0.10_s42_a815e802a7] ft 7/15 train_loss=0.1171 val_loss=0.5921 val_macroF1=0.7101 val_acc=0.8182  eta~0.2m
+[10:34:54]   [supcon_f0.10_s42_a815e802a7] ft 8/15 train_loss=0.0538 val_loss=0.5855 val_macroF1=0.7546 val_acc=0.8115  eta~0.2m
+[10:35:01]   [supcon_f0.10_s42_a815e802a7] ft 9/15 train_loss=0.0659 val_loss=0.5615 val_macroF1=0.7706 val_acc=0.8204  *best*  eta~0.2m
+[10:35:02]   [supcon_f0.10_s42_a815e802a7] ft 10/15 train_loss=0.0545 val_loss=0.4896 val_macroF1=0.7934 val_acc=0.8404  *best*  eta~0.1m
+[10:35:03]   [supcon_f0.10_s42_a815e802a7] ft 11/15 train_loss=0.0398 val_loss=0.4665 val_macroF1=0.8082 val_acc=0.8514  *best*  eta~0.1m
+[10:35:05]   [supcon_f0.10_s42_a815e802a7] ft 12/15 train_loss=0.0171 val_loss=0.4668 val_macroF1=0.8039 val_acc=0.8492  eta~0.1m
+[10:35:06]   [supcon_f0.10_s42_a815e802a7] ft 13/15 train_loss=0.0225 val_loss=0.4814 val_macroF1=0.8022 val_acc=0.8492  eta~0.1m
+[10:35:07]   [supcon_f0.10_s42_a815e802a7] ft 14/15 train_loss=0.0218 val_loss=0.4797 val_macroF1=0.8052 val_acc=0.8514  eta~0.0m
+[10:35:09]   [supcon_f0.10_s42_a815e802a7] ft 15/15 train_loss=0.0246 val_loss=0.4794 val_macroF1=0.8052 val_acc=0.8514  eta~0.0m

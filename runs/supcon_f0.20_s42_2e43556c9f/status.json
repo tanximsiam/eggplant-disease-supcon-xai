@@ -1,0 +1,33 @@
+{
+  "state": "completed",
+  "run_id": "supcon_f0.20_s42_2e43556c9f",
+  "best": {
+    "epoch": 11,
+    "val_macro_f1": 0.8793044695849789,
+    "val_loss": 0.414428954203706,
+    "val_accuracy": 0.9113082039911308
+  },
+  "optimizer_steps": 1170,
+  "image_views": 30900,
+  "runtime_min": 1.69,
+  "peak_mem_gib_this_session": 1.5097951889038086,
+  "support_images": 412,
+  "best_checkpoint_sha256": "219a17292da47e33bb384d9a7ceaae085819038d33c8cc895870e0ead1b47c81",
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "torch": "2.5.1+cu124",
+    "cuda_available": true,
+    "cuda_version": "12.4",
+    "cudnn": 90100,
+    "numpy": "2.2.6",
+    "git_revision": null,
+    "torchvision": "0.20.1+cu124",
+    "gpu": "NVIDIA GeForce RTX 3060 Ti",
+    "gpu_total_mem_gb": 8.59
+  },
+  "finished": "2026-04-17 10:47:03",
+  "tags": [
+    "main"
+  ]
+}
