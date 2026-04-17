@@ -58,6 +58,36 @@ The seeds vary the training subset, the data order and the augmentations under *
 
 ![deletion curves](results/xai/deletion_curves.png)
 
+#### Grad-CAM and occlusion evidence: CE vs SupCon on the same images
+Rows are predetermined: the first image of each class in the saved XAI subset, not chosen by outcome. The target is the ground-truth class for both models. In this sample, CE gets 10/10 and SupCon 8/10: Aphids→Flea Beetles and Cercospora→Aphids.
+
+![Grad-CAM and occlusion, CE vs SupCon](results/xai/evidence_ce_vs_supcon.png)
+
+What the figure shows, without over-reading it:
+- **The two models mostly highlight the same region.** On fruit it is the eggplant body or calyx. On leaves it is the main leaf blade, often its centre rather than individual spots or holes.
+- **Occlusion is sharper but noisier.** It often marks a few patches inside the Grad-CAM region (Defect Eggplant calyx, Powdery Mildew, TMV). When the ground-truth probability is low (the two SupCon errors), its map is diffuse. Occlusion and Grad-CAM disagree in places; that is diagnostic, not proof that either is wrong.
+- **None of this validates lesion localisation**, since the dataset has no lesion masks.
+
+#### Sanity check: randomised classifier head
+Top row: trained head. Bottom row: fixed random head. If the maps barely changed, Grad-CAM would not reflect the learned classifier. Here they change substantially: median Spearman ρ is 0.03 for CE and 0.10 for SupCon.
+
+![sanity CE](results/xai/sanity_random_head_ce.png)
+![sanity SupCon](results/xai/sanity_random_head_supcon.png)
+
+<details>
+<summary><b>Full error galleries</b> (one predetermined correct + one incorrect image per class, where available; the incorrect rows also show Grad-CAM for the predicted class)</summary>
+
+**CE (20%, seed 42)**
+
+![CE gallery](results/xai/gallery_ce.png)
+
+**SupCon → CE (20%, seed 42)**
+
+![SupCon gallery](results/xai/gallery_supcon.png)
+</details>
+
+Numerical XAI outputs: `results/xai/per_image_xai.csv`, `xai_summary.json`, `deletion_curves.npz`, `sanity_random_head_*.csv`. Regenerate the compact figure with `.venv/bin/python scripts/xai_evidence_figure.py` (it needs the local checkpoints).
+
 ### Limitations
 - One dataset from one source and region, with image-level labels only. There is no plant, field or capture metadata, so the test set is not shown to be independent at plant level, and nothing here supports field generalisation or diagnostic use.
 - The single fixed split and three seeds give low statistical power. Only one CE recipe and one SupCon recipe were tried, with no tuning. Validation labels (451) add to the development label budget.
@@ -156,7 +186,7 @@ Every stage prints timestamped progress and tqdm bars, and is also logged to `lo
 configs/experiment.yaml     frozen configuration
 eggplant/                   download, audit, splits, data, model, supcon, train, metrics, evaluate, xai, export, CLI (__main__)
 tests/                      SupCon vs naive reference, masks/gradients, split leakage, nested supports, resume, checkpoint/class map, tiny XAI
-scripts/                    setup_env.sh, run.sh (foreground runner + logs), preview_augmentations.py
+scripts/                    setup_env.sh, run.sh (foreground runner + logs), preview_augmentations.py, xai_evidence_figure.py
 app/streamlit_app.py        local demo
 data/manifests/             manifest, audit report, split, supports, contact sheets (committed)
 results/                    ledger, metrics, predictions, figures, XAI outputs (committed)
