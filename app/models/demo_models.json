@@ -1,0 +1,26 @@
+[
+  {
+    "method": "ce",
+    "file": "ce_f0.20_s42.pt",
+    "run_id": "ce_f0.20_s42_6b60d8ad64",
+    "sha256": "b6ab64f80fb9a7860d5b51138496be35466b8e3a6c1b431f93f34b149713a03e",
+    "best_val": {
+      "epoch": 11,
+      "val_macro_f1": 0.865537470026673,
+      "val_loss": 0.458681822950103,
+      "val_accuracy": 0.893569844789357
+    }
+  },
+  {
+    "method": "supcon",
+    "file": "supcon_f0.20_s42.pt",
+    "run_id": "supcon_f0.20_s42_2e43556c9f",
+    "sha256": "b08816f14f51c2caa1dcccaa1b5c70199250f02d5604f2bf079f9f723d7d0606",
+    "best_val": {
+      "epoch": 11,
+      "val_macro_f1": 0.8793044695849789,
+      "val_loss": 0.414428954203706,
+      "val_accuracy": 0.9113082039911308
+    }
+  }
+]

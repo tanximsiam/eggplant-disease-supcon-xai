@@ -10,4 +10,6 @@ exports/
 logs/
 *.pt
 *.pth
+# exception: the two small demo checkpoints used by the hosted Streamlit app
+!app/models/*.pt
 *.zip

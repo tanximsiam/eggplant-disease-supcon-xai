@@ -175,7 +175,22 @@ bash scripts/run.sh export
 # 9. local demo (CPU is fine)
 .venv/bin/streamlit run app/streamlit_app.py --server.address localhost
 ```
-The demo is local only. It loads `exports/demo/*.pt` (CE or SupCon, 20%, seed 42), accepts JPG/PNG/BMP/WEBP, corrects EXIF orientation, shows uncalibrated top-5 scores, Grad-CAM for any chosen class and optional occlusion, and rejects unreadable or tiny files.
+### Demo app (local or Streamlit Community Cloud)
+The demo runs on CPU and uses the two predeclared models (20% fraction, seed 42). Their checkpoints are committed in `app/models/` (16 MB each). The app:
+- shows the CE and SupCon scores side by side. They are uncalibrated, and the app says so.
+- explains any chosen class with Grad-CAM and optional occlusion.
+- offers 10 bundled example images, one per class. These are the first image of each class in the predeclared XAI test subset, downscaled, and they come from the CC BY 4.0 dataset.
+- accepts uploads (JPG/PNG/BMP/WEBP, EXIF-corrected) and rejects unreadable or tiny files.
+
+It cannot reject images that are not eggplants.
+
+**Host it on [Streamlit Community Cloud](https://share.streamlit.io):**
+1. Sign in with GitHub, then choose **Create app** and **Deploy a public app from GitHub**.
+2. Set **Repository** to `tanximsiam/eggplant-disease-supcon-xai`, **Branch** to `main`, and **Main file path** to `app/streamlit_app.py`.
+3. Optionally, under **Advanced settings**, pick Python 3.12.
+4. Choose **Deploy**.
+
+Dependencies come from `app/requirements.txt`, which installs the CPU-only PyTorch build. Streamlit Cloud uses the requirements file next to the entrypoint before the root one, so the CUDA training stack is never installed. `bash scripts/test_app_env.sh` rebuilds exactly that environment locally and serves the app on port 8502.
 
 Every stage prints timestamped progress and tqdm bars, and is also logged to `logs/<stage>_<time>.log`. Each run writes `runs/<run_id>/{spec.json,status.json,train.log,history.csv}`. Its checkpoints (`best.pt`, `last.pt` with optimizer/scheduler/AMP/RNG state, `encoder_after_rep.pt`) are written atomically and kept out of Git. The run ID is a hash of the method, fraction, seed, training config and split/support/class-map hashes. Resume refuses a mismatched checkpoint.
 
@@ -187,7 +202,7 @@ configs/experiment.yaml     frozen configuration
 eggplant/                   download, audit, splits, data, model, supcon, train, metrics, evaluate, xai, export, CLI (__main__)
 tests/                      SupCon vs naive reference, masks/gradients, split leakage, nested supports, resume, checkpoint/class map, tiny XAI
 scripts/                    setup_env.sh, run.sh (foreground runner + logs), preview_augmentations.py, xai_evidence_figure.py
-app/streamlit_app.py        local demo
+app/                        Streamlit demo: streamlit_app.py, requirements.txt (CPU), models/ (2 demo checkpoints), examples/
 data/manifests/             manifest, audit report, split, supports, contact sheets (committed)
 results/                    ledger, metrics, predictions, figures, XAI outputs (committed)
 ```
