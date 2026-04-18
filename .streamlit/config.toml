@@ -3,3 +3,27 @@ maxUploadSize = 15
 
 [browser]
 gatherUsageStats = false
+
+# Restrained neutral palette with one aubergine accent; Streamlit's default fonts (Source Sans / Source Code).
+# Both themes ship; viewers switch under ⋮ → Settings, and "System" follows the device.
+[theme]
+baseRadius = "0.5rem"
+showWidgetBorder = true
+
+[theme.light]
+primaryColor = "#6B3FA0"
+backgroundColor = "#FBFBFA"
+secondaryBackgroundColor = "#F1F0EE"
+textColor = "#1D1B20"
+linkColor = "#5E3591"
+borderColor = "#DEDBD6"
+dataframeHeaderBackgroundColor = "#F1F0EE"
+
+[theme.dark]
+primaryColor = "#B89BE3"
+backgroundColor = "#131315"
+secondaryBackgroundColor = "#1D1D21"
+textColor = "#ECEAF0"
+linkColor = "#C7B0EA"
+borderColor = "#34333A"
+dataframeHeaderBackgroundColor = "#1D1D21"
