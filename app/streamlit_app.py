@@ -150,15 +150,32 @@ st.markdown(f":material/code: [Code and full report]({REPO}) &nbsp;·&nbsp; "
 
 # ---------------------------------------------------------------- input
 st.subheader("Image", anchor=False)
-source = st.segmented_control("Image source", ["Example", "Upload"], default="Example",
-                              label_visibility="collapsed")
+EXAMPLE, UPLOAD = "Example images", "Upload your photo"
+def _keep_one_source():
+    """Clicking the active segment would deselect it; keep exactly one source selected."""
+    if st.session_state.source is None:
+        st.session_state.source = st.session_state.get("source_last", EXAMPLE)
+    st.session_state.source_last = st.session_state.source
+
+
+st.session_state.setdefault("source", EXAMPLE)
+source = st.segmented_control(
+    "Choose an image source", [EXAMPLE, UPLOAD], key="source", on_change=_keep_one_source,
+    format_func=lambda s: f":material/{'photo_library' if s == EXAMPLE else 'upload'}: {s}") or EXAMPLE
+if source == EXAMPLE:
+    st.warning(f"You are viewing a bundled example from the test set, so its true label is known. "
+               f"To check your own photo, switch to **{UPLOAD}** above.", icon=":material/priority_high:")
+else:
+    st.warning(f"You are classifying your own photo. There is no true label to compare against. "
+               f"Switch back to **{EXAMPLE}** to see the models on known test images.",
+               icon=":material/priority_high:")
 examples = {p.stem.split("_", 1)[1].replace("_", " "): p for p in sorted(EXAMPLES.glob("*.jpg"))}
 truth = None
-if source == "Upload":
+if source == UPLOAD:
     up = st.file_uploader("Photo of an eggplant leaf or fruit", type=["jpg", "jpeg", "png", "bmp", "webp"],
                           help="JPG, PNG, BMP or WEBP, up to 15 MB. Processed in memory, not stored.")
     if up is None:
-        st.caption("Upload a photo to see both models' predictions, or switch to an example.")
+        st.caption("Results appear here once a photo is uploaded.")
         st.stop()
     data = up.getvalue()
 else:

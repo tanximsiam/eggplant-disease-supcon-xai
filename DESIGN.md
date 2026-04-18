@@ -40,7 +40,8 @@ At 560px and below:
 - images are capped at 38vh so the verdict stays near the top.
 
 ## Components
-- Segmented controls for exclusive choices (source, model).
+- Segmented controls for exclusive choices (source, model). The image-source switch always keeps one option selected and has a visible label with icons.
+- One `st.warning` guide banner (with the `priority_high` icon) directly under the source switch. It says which mode is active and how to switch. It is the only yellow element on the page.
 - Pills for examples.
 - A selectbox for the class to explain.
 - A button for slow work (occlusion), which names its action and gives a timing tooltip.
