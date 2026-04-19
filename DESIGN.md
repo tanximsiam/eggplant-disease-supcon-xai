@@ -41,7 +41,7 @@ At 560px and below:
 
 ## Components
 - Segmented controls for exclusive choices (source, model). The image-source switch always keeps one option selected and has a visible label with icons.
-- One `st.warning` guide banner (with the `priority_high` icon) directly under the source switch. It says which mode is active and how to switch. It is the only yellow element on the page.
+- A guide note directly under the source switch. It is a caption with a violet circled `error` icon that says which mode is active and how to switch. It is an instruction, not an alert, so it uses no coloured box.
 - Pills for examples.
 - A selectbox for the class to explain.
 - A button for slow work (occlusion), which names its action and gives a timing tooltip.

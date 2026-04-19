@@ -2,6 +2,8 @@
 
 A small, reproducible portfolio experiment run locally (WSL2, RTX 3060 Ti 8 GB).
 
+**Live demo:** [eggplant-disease-supcon-xai.streamlit.app](https://eggplant-disease-supcon-xai.streamlit.app). It compares both models side by side, with Grad-CAM and occlusion explanations.
+
 **Question.** When only 10% or 20% of the eligible labelled training pool is used, does a supervised-contrastive (SupCon) representation phase followed by the same cross-entropy (CE) fine-tuning improve 10-class eggplant image classification compared with a matched two-stage CE baseline? And how do the resulting Grad-CAM explanations behave under perturbation?
 
 **What this is / is not.** This is *low-resource supervised transfer learning*: reduced training fractions on the **same 10 classes** at training and test time, starting from ImageNet weights. It is **not** few-shot / episodic meta-learning with fixed shots or unseen classes. SupCon improving results was a hypothesis, not an assumption. Negative and inconclusive outcomes are reported as they came out.
@@ -176,7 +178,7 @@ bash scripts/run.sh export
 .venv/bin/streamlit run app/streamlit_app.py --server.address localhost
 ```
 ### Demo app (local or Streamlit Community Cloud)
-The demo runs on CPU and uses the two predeclared models (20% fraction, seed 42). Their checkpoints are committed in `app/models/` (16 MB each). The app:
+It is hosted at https://eggplant-disease-supcon-xai.streamlit.app. The demo runs on CPU and uses the two predeclared models (20% fraction, seed 42). Their checkpoints are committed in `app/models/` (16 MB each). The app:
 - shows the CE and SupCon scores side by side. They are uncalibrated, and the app says so.
 - explains any chosen class with Grad-CAM and optional occlusion.
 - offers 10 bundled example images, one per class. These are the first image of each class in the predeclared XAI test subset, downscaled, and they come from the CC BY 4.0 dataset.

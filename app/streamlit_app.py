@@ -163,12 +163,11 @@ source = st.segmented_control(
     "Choose an image source", [EXAMPLE, UPLOAD], key="source", on_change=_keep_one_source,
     format_func=lambda s: f":material/{'photo_library' if s == EXAMPLE else 'upload'}: {s}") or EXAMPLE
 if source == EXAMPLE:
-    st.warning(f"You are viewing a bundled example from the test set, so its true label is known. "
-               f"To check your own photo, switch to **{UPLOAD}** above.", icon=":material/priority_high:")
+    st.caption(f":violet[:material/error:] You are viewing an example from the test set, so its true label is "
+               f"known. To check your own photo, switch to **{UPLOAD}**.")
 else:
-    st.warning(f"You are classifying your own photo. There is no true label to compare against. "
-               f"Switch back to **{EXAMPLE}** to see the models on known test images.",
-               icon=":material/priority_high:")
+    st.caption(f":violet[:material/error:] You are classifying your own photo, so there is no true label to "
+               f"compare against. Switch to **{EXAMPLE}** to see the models on known test images.")
 examples = {p.stem.split("_", 1)[1].replace("_", " "): p for p in sorted(EXAMPLES.glob("*.jpg"))}
 truth = None
 if source == UPLOAD:
